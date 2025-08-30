@@ -11,7 +11,7 @@ export default function LoginPage() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const result = await loginUser({ email, password });
-        if (result.token) {
+        if (result.Token) {
             localStorage.setItem("token", result.token);
             setMessage("Login bem-sucedido!");
         } else {

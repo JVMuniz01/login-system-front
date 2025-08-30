@@ -2,12 +2,12 @@
 import { useState } from "react";
 
 export default function RegisterForm() {
+    const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [username, setUsername] = useState("");
     const [error, setError] = useState(null);
 
-    const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:8080/users";
+    const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:8080";
 
     const registerUser = async (e) => {
         e.preventDefault();
